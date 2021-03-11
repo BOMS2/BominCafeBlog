@@ -1,0 +1,598 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		293EA02725FA9952008B101A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293EA02625FA9952008B101A /* AppDelegate.swift */; };
+		293EA02925FA9952008B101A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293EA02825FA9952008B101A /* SceneDelegate.swift */; };
+		293EA02B25FA9952008B101A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293EA02A25FA9952008B101A /* ViewController.swift */; };
+		293EA02E25FA9952008B101A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 293EA02C25FA9952008B101A /* Main.storyboard */; };
+		293EA03025FA9956008B101A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 293EA02F25FA9956008B101A /* Assets.xcassets */; };
+		293EA03325FA9956008B101A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 293EA03125FA9956008B101A /* LaunchScreen.storyboard */; };
+		293EA03E25FA9956008B101A /* BominCafeBlogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293EA03D25FA9956008B101A /* BominCafeBlogTests.swift */; };
+		293EA04925FA9956008B101A /* BominCafeBlogUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293EA04825FA9956008B101A /* BominCafeBlogUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		293EA03A25FA9956008B101A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 293EA01B25FA9952008B101A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 293EA02225FA9952008B101A;
+			remoteInfo = BominCafeBlog;
+		};
+		293EA04525FA9956008B101A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 293EA01B25FA9952008B101A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 293EA02225FA9952008B101A;
+			remoteInfo = BominCafeBlog;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		293EA02325FA9952008B101A /* BominCafeBlog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BominCafeBlog.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		293EA02625FA9952008B101A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		293EA02825FA9952008B101A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		293EA02A25FA9952008B101A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		293EA02D25FA9952008B101A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		293EA02F25FA9956008B101A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		293EA03225FA9956008B101A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		293EA03425FA9956008B101A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		293EA03925FA9956008B101A /* BominCafeBlogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BominCafeBlogTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		293EA03D25FA9956008B101A /* BominCafeBlogTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BominCafeBlogTests.swift; sourceTree = "<group>"; };
+		293EA03F25FA9956008B101A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		293EA04425FA9956008B101A /* BominCafeBlogUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BominCafeBlogUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		293EA04825FA9956008B101A /* BominCafeBlogUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BominCafeBlogUITests.swift; sourceTree = "<group>"; };
+		293EA04A25FA9956008B101A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		293EA02025FA9952008B101A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		293EA03625FA9956008B101A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		293EA04125FA9956008B101A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		293EA01A25FA9952008B101A = {
+			isa = PBXGroup;
+			children = (
+				293EA02525FA9952008B101A /* BominCafeBlog */,
+				293EA03C25FA9956008B101A /* BominCafeBlogTests */,
+				293EA04725FA9956008B101A /* BominCafeBlogUITests */,
+				293EA02425FA9952008B101A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		293EA02425FA9952008B101A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				293EA02325FA9952008B101A /* BominCafeBlog.app */,
+				293EA03925FA9956008B101A /* BominCafeBlogTests.xctest */,
+				293EA04425FA9956008B101A /* BominCafeBlogUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		293EA02525FA9952008B101A /* BominCafeBlog */ = {
+			isa = PBXGroup;
+			children = (
+				293EA02625FA9952008B101A /* AppDelegate.swift */,
+				293EA02825FA9952008B101A /* SceneDelegate.swift */,
+				293EA02A25FA9952008B101A /* ViewController.swift */,
+				293EA02C25FA9952008B101A /* Main.storyboard */,
+				293EA02F25FA9956008B101A /* Assets.xcassets */,
+				293EA03125FA9956008B101A /* LaunchScreen.storyboard */,
+				293EA03425FA9956008B101A /* Info.plist */,
+			);
+			path = BominCafeBlog;
+			sourceTree = "<group>";
+		};
+		293EA03C25FA9956008B101A /* BominCafeBlogTests */ = {
+			isa = PBXGroup;
+			children = (
+				293EA03D25FA9956008B101A /* BominCafeBlogTests.swift */,
+				293EA03F25FA9956008B101A /* Info.plist */,
+			);
+			path = BominCafeBlogTests;
+			sourceTree = "<group>";
+		};
+		293EA04725FA9956008B101A /* BominCafeBlogUITests */ = {
+			isa = PBXGroup;
+			children = (
+				293EA04825FA9956008B101A /* BominCafeBlogUITests.swift */,
+				293EA04A25FA9956008B101A /* Info.plist */,
+			);
+			path = BominCafeBlogUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		293EA02225FA9952008B101A /* BominCafeBlog */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 293EA04D25FA9956008B101A /* Build configuration list for PBXNativeTarget "BominCafeBlog" */;
+			buildPhases = (
+				293EA01F25FA9952008B101A /* Sources */,
+				293EA02025FA9952008B101A /* Frameworks */,
+				293EA02125FA9952008B101A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BominCafeBlog;
+			productName = BominCafeBlog;
+			productReference = 293EA02325FA9952008B101A /* BominCafeBlog.app */;
+			productType = "com.apple.product-type.application";
+		};
+		293EA03825FA9956008B101A /* BominCafeBlogTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 293EA05025FA9956008B101A /* Build configuration list for PBXNativeTarget "BominCafeBlogTests" */;
+			buildPhases = (
+				293EA03525FA9956008B101A /* Sources */,
+				293EA03625FA9956008B101A /* Frameworks */,
+				293EA03725FA9956008B101A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				293EA03B25FA9956008B101A /* PBXTargetDependency */,
+			);
+			name = BominCafeBlogTests;
+			productName = BominCafeBlogTests;
+			productReference = 293EA03925FA9956008B101A /* BominCafeBlogTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		293EA04325FA9956008B101A /* BominCafeBlogUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 293EA05325FA9956008B101A /* Build configuration list for PBXNativeTarget "BominCafeBlogUITests" */;
+			buildPhases = (
+				293EA04025FA9956008B101A /* Sources */,
+				293EA04125FA9956008B101A /* Frameworks */,
+				293EA04225FA9956008B101A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				293EA04625FA9956008B101A /* PBXTargetDependency */,
+			);
+			name = BominCafeBlogUITests;
+			productName = BominCafeBlogUITests;
+			productReference = 293EA04425FA9956008B101A /* BominCafeBlogUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		293EA01B25FA9952008B101A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					293EA02225FA9952008B101A = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					293EA03825FA9956008B101A = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 293EA02225FA9952008B101A;
+					};
+					293EA04325FA9956008B101A = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 293EA02225FA9952008B101A;
+					};
+				};
+			};
+			buildConfigurationList = 293EA01E25FA9952008B101A /* Build configuration list for PBXProject "BominCafeBlog" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 293EA01A25FA9952008B101A;
+			productRefGroup = 293EA02425FA9952008B101A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				293EA02225FA9952008B101A /* BominCafeBlog */,
+				293EA03825FA9956008B101A /* BominCafeBlogTests */,
+				293EA04325FA9956008B101A /* BominCafeBlogUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		293EA02125FA9952008B101A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				293EA03325FA9956008B101A /* LaunchScreen.storyboard in Resources */,
+				293EA03025FA9956008B101A /* Assets.xcassets in Resources */,
+				293EA02E25FA9952008B101A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		293EA03725FA9956008B101A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		293EA04225FA9956008B101A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		293EA01F25FA9952008B101A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				293EA02B25FA9952008B101A /* ViewController.swift in Sources */,
+				293EA02725FA9952008B101A /* AppDelegate.swift in Sources */,
+				293EA02925FA9952008B101A /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		293EA03525FA9956008B101A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				293EA03E25FA9956008B101A /* BominCafeBlogTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		293EA04025FA9956008B101A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				293EA04925FA9956008B101A /* BominCafeBlogUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		293EA03B25FA9956008B101A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 293EA02225FA9952008B101A /* BominCafeBlog */;
+			targetProxy = 293EA03A25FA9956008B101A /* PBXContainerItemProxy */;
+		};
+		293EA04625FA9956008B101A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 293EA02225FA9952008B101A /* BominCafeBlog */;
+			targetProxy = 293EA04525FA9956008B101A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		293EA02C25FA9952008B101A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				293EA02D25FA9952008B101A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		293EA03125FA9956008B101A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				293EA03225FA9956008B101A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		293EA04B25FA9956008B101A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		293EA04C25FA9956008B101A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		293EA04E25FA9956008B101A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 76R96GR5TQ;
+				INFOPLIST_FILE = BominCafeBlog/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.techtown.BominCafeBlog;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		293EA04F25FA9956008B101A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 76R96GR5TQ;
+				INFOPLIST_FILE = BominCafeBlog/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.techtown.BominCafeBlog;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		293EA05125FA9956008B101A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 76R96GR5TQ;
+				INFOPLIST_FILE = BominCafeBlogTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.techtown.BominCafeBlogTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BominCafeBlog.app/BominCafeBlog";
+			};
+			name = Debug;
+		};
+		293EA05225FA9956008B101A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 76R96GR5TQ;
+				INFOPLIST_FILE = BominCafeBlogTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.techtown.BominCafeBlogTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BominCafeBlog.app/BominCafeBlog";
+			};
+			name = Release;
+		};
+		293EA05425FA9956008B101A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 76R96GR5TQ;
+				INFOPLIST_FILE = BominCafeBlogUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.techtown.BominCafeBlogUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BominCafeBlog;
+			};
+			name = Debug;
+		};
+		293EA05525FA9956008B101A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 76R96GR5TQ;
+				INFOPLIST_FILE = BominCafeBlogUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.techtown.BominCafeBlogUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BominCafeBlog;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		293EA01E25FA9952008B101A /* Build configuration list for PBXProject "BominCafeBlog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				293EA04B25FA9956008B101A /* Debug */,
+				293EA04C25FA9956008B101A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		293EA04D25FA9956008B101A /* Build configuration list for PBXNativeTarget "BominCafeBlog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				293EA04E25FA9956008B101A /* Debug */,
+				293EA04F25FA9956008B101A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		293EA05025FA9956008B101A /* Build configuration list for PBXNativeTarget "BominCafeBlogTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				293EA05125FA9956008B101A /* Debug */,
+				293EA05225FA9956008B101A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		293EA05325FA9956008B101A /* Build configuration list for PBXNativeTarget "BominCafeBlogUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				293EA05425FA9956008B101A /* Debug */,
+				293EA05525FA9956008B101A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 293EA01B25FA9952008B101A /* Project object */;
+}
