@@ -16,12 +16,12 @@ enum InfoError:Error {
 struct KakaoAPI {
 	var sourceURL : URL? = nil
 	
-	init(type: String, searchBlog: String, sort: String) {
-		let searchString : String = "https://dapi.kakao.com/v2/search/\(type)?query=\(searchBlog)&sort=\(sort)&size=25"
+	init(type: String, search: String, sort: String) {
+		let searchString : String = "https://dapi.kakao.com/v2/search/\(type)?query=\(search)&sort=\(sort)&size=25"
 		self.sourceURL = convertUrl(searchString)
 	}
 	
-	func fetchBlogList(completion: @escaping(Result<Blog, InfoError>) -> Void) {
+	func fetchBlogCafeList(completion: @escaping(Result<KakaoModel, InfoError>) -> Void) {
 		if let url = self.sourceURL {
 			var request = URLRequest(url: url)
 			request.httpMethod = "GET"
@@ -34,8 +34,8 @@ struct KakaoAPI {
 				}
 				do {
 					let decoder = JSONDecoder()
-					let blogResponse = try decoder.decode(Blog.self, from: jsonData)
-					completion(.success(blogResponse))
+					let response = try decoder.decode(KakaoModel.self, from: jsonData)
+					completion(.success(response))
 				} catch {
 					completion(.failure(.noData))
 				}
@@ -43,29 +43,6 @@ struct KakaoAPI {
 			task.resume()
 		}
 	}
-	
-//	func fetchCafeList(completion: @escaping(Result<Cafe, InfoError>) -> Void) {
-//		if let url = self.sourceURL {
-//			var request = URLRequest(url: url)
-//			request.httpMethod = "GET"
-//			request.addValue("KakaoAK 99862f133c1f3ef0615ee34404a97508", forHTTPHeaderField: "Authorization")
-//			
-//			let task = URLSession.shared.dataTask(with: request) { data, _, _ in
-//				guard let jsonData = data else {
-//					completion(.failure(.noRequest))
-//					return
-//				}
-//				do {
-//					let decoder = JSONDecoder()
-//					let cafeResponse = try decoder.decode(Cafe.self, from: jsonData)
-//					completion(.success(cafeResponse))
-//				} catch {
-//					completion(.failure(.noData))
-//				}
-//			}
-//			task.resume()
-//		}
-//	}
 }
 
 extension KakaoAPI {

@@ -5,7 +5,7 @@
 //  Created by 김보민 on 2021/03/12.
 //
 
-import Foundation
+import UIKit
 
 protocol TableViewReloadDelegate {
 	func tableViewReload()
@@ -14,44 +14,55 @@ protocol TableViewReloadDelegate {
 class SearchViewModel {
 	var delegate: TableViewReloadDelegate!
 	var blogList = [Document]()
-//	var cafeList = [CafeDocument]()
+	var cafeList = [Document]()
+	var allList = [Document]()
+	
+	var filterText = "all"
 	
 	var listCount: Int = 0
 	
 	func initialize() {
 		self.blogList = []
-//		self.cafeList = []
+		self.cafeList = []
+		self.allList = []
 	}
 	
-//	func allType() {
-//		self.listCount = self.blogList.count + self.cafeList.count
-//	}
-	
 	func requestData(_ searchBarText : String, _ type: String) {
-		let request = KakaoAPI(type: type, searchBlog: searchBarText, sort: "accuracy")
-		request.fetchBlogList {[weak self] result in
+		let request = KakaoAPI(type: type, search: searchBarText, sort: "accuracy")
+		request.fetchBlogCafeList {[weak self] result in
 			switch result {
 				case .failure(let error):
 					print("Error : ", error)
-				case .success(let blog):
-					self?.blogList.append(contentsOf: blog.documents)
-					self?.listCount = self?.blogList.count ?? 0
+				case .success(let data):
+					if type == "blog" {
+						self?.blogList.append(contentsOf: data.documents)
+						self?.allList.append(contentsOf: data.documents)
+					}
+					if type == "cafe" {
+						self?.cafeList.append(contentsOf: data.documents)
+						self?.allList.append(contentsOf: data.documents)
+					}
+					self?.sort()
 					self?.delegate.tableViewReload()
 			}
 		}
 	}
 	
-//	func requestCafe(_ searchBarText : String) {
-//		let request = KakaoAPI(type: "cafe", searchBlog: searchBarText, sort: "accuracy")
-//		request.fetchCafeList {[weak self] result in
-//			switch result {
-//				case .failure(let error):
-//					print("Error : ", error)
-//				case .success(let cafe):
-//					self?.cafeList.append(contentsOf: cafe.documents)
-//					self?.listCount = self?.cafeList.count ?? 0
-//					self?.delegate.tableViewReload()
-//			}
-//		}
-//	}
+	func sort() {
+		let sorted = self.allList.sorted(by: { $0.title < $1.title })
+		self.allList = sorted
+	}
+	
+	func clickFilter(text: String) {
+		switch text {
+			case "Blog":
+				self.allList = []
+				self.allList = self.blogList
+			case "Cafe":
+				self.allList = []
+				self.allList = self.cafeList
+			default:
+				break
+		}
+	}
 }

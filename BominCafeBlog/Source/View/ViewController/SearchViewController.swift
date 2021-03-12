@@ -28,15 +28,17 @@ class SearchViewController: UIViewController {
 		button.layer.borderColor = UIColor.black.cgColor
 		button.setTitle("type", for: .normal)
 		button.setTitleColor(.black, for: .normal)
+		button.widthAnchor.constraint(equalToConstant: 50).isActive = true
 		return button
 	}()
 	private var filterTypeStackView: UIStackView = {
-		let stackView = UIStackView(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+		let stackView = UIStackView(frame: .zero)
 		stackView.axis = .horizontal
 		stackView.spacing = 10
 		stackView.alignment = .center
 		return stackView
 	}()
+	private let filterView = FilterView()
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -55,7 +57,8 @@ extension SearchViewController {
 		self.searchBar.delegate = self
 		self.searchBar.placeholder = " more than 2 letters"
 		
-		
+		self.filter.addTarget(self, action:#selector(self.clickFilter), for: .touchUpInside)
+		self.filter.isSelected = true
 	}
 
 	private func setLayout() {
@@ -86,31 +89,49 @@ extension SearchViewController {
 		self.tableView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
 		self.tableView.topAnchor.constraint(equalTo: self.filterTypeStackView.bottomAnchor).isActive = true
 		self.tableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
+		
+		self.filter.setContentHuggingPriority(.required, for:.horizontal)
+		self.type.setContentCompressionResistancePriority(.required, for: .horizontal)
 	}
 	
-	func showSearchBarButton(shouldShow: Bool) {
+	private func showSearchBarButton(shouldShow: Bool) {
 		if shouldShow {
-			navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(handleShowSearchBar))
+			navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(self.handleShowSearchBar))
 		} else {
 			navigationItem.rightBarButtonItem = nil
 		}
 	}
 	
-	func search(shouldShow: Bool) {
+	private func search(shouldShow: Bool) {
 		showSearchBarButton(shouldShow: !shouldShow)
 		searchBar.showsCancelButton = shouldShow
 		navigationItem.titleView = shouldShow ? searchBar : nil
 	}
 	
-	@objc func handleShowSearchBar() {
+	@objc private func handleShowSearchBar() {
 		search(shouldShow: true)
 		searchBar.becomeFirstResponder()
+	}
+	
+	@objc private func clickFilter() {
+		if self.filter.isSelected {
+			self.view.addSubview(self.filterView)
+			self.filterView.translatesAutoresizingMaskIntoConstraints = false
+			self.filterView.topAnchor.constraint(equalTo: self.filterTypeStackView.bottomAnchor).isActive = true
+			self.filterView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
+			self.filterView.widthAnchor.constraint(equalTo: self.filter.widthAnchor).isActive = true
+			self.filterView.heightAnchor.constraint(equalToConstant: 120).isActive = true
+			self.filter.isSelected = false
+		} else {
+			self.filterView.removeFromSuperview()
+			self.filter.isSelected = true
+		}
 	}
 }
 
 extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return self.searchViewModel.listCount
+		return self.searchViewModel.allList.count
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -118,8 +139,8 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
 			return UITableViewCell()
 		}
 		
-		let blog = self.searchViewModel.blogList[indexPath.row]
-		cell.loadBlog(blogInfo: blog)
+		let blog = self.searchViewModel.allList[indexPath.row]
+		cell.configure(info: blog)
 		
 		return cell
 	}
@@ -130,18 +151,19 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
 }
 
 extension SearchViewController: UISearchBarDelegate {
-	
 	func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
 		guard let searchBarText = searchBar.text else { return }
 		if searchBarText.count >= 1 {
 			self.searchViewModel.initialize()
 			self.searchText = searchBarText
 			self.searchViewModel.requestData(self.searchText, "blog")
+			self.searchViewModel.requestData(self.searchText, "cafe")
 		} else {
 			self.searchViewModel.initialize()
 			self.searchViewModel.listCount = 0
-			tableView.reloadData()
+			self.tableView.reloadData()
 		}
+		
 	}
 	
 	func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {

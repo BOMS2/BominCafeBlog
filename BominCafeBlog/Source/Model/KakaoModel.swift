@@ -1,5 +1,5 @@
 //
-//  Blog.swift
+//  KakaoModel.swift
 //  BominCafeBlog
 //
 //  Created by 김보민 on 2021/03/12.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Blog: Codable {
+struct KakaoModel: Codable {
 	let meta: Meta
 	let documents: [Document]
 	
