@@ -59,6 +59,7 @@ extension SearchViewController {
 		
 		self.filter.addTarget(self, action:#selector(self.clickFilter), for: .touchUpInside)
 		self.filter.isSelected = true
+		self.type.addTarget(self, action:#selector(self.clickType), for: .touchUpInside)
 	}
 
 	private func setLayout() {
@@ -126,6 +127,10 @@ extension SearchViewController {
 			self.filterView.removeFromSuperview()
 			self.filter.isSelected = true
 		}
+	}
+	
+	@objc private func clickType() {
+		self.present(AlertViewController(), animated: true, completion: nil)
 	}
 }
 

@@ -19,6 +19,7 @@
 		293EA0D525FB3F2B008B101A /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293EA0D425FB3F2B008B101A /* SearchCell.swift */; };
 		293EA0DB25FB3FA0008B101A /* ThumbnailImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293EA0DA25FB3FA0008B101A /* ThumbnailImageView.swift */; };
 		293EA0EF25FB81B7008B101A /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293EA0EE25FB81B7008B101A /* FilterView.swift */; };
+		293EA11C25FBB72F008B101A /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293EA11B25FBB72F008B101A /* AlertViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		293EA0D425FB3F2B008B101A /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
 		293EA0DA25FB3FA0008B101A /* ThumbnailImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailImageView.swift; sourceTree = "<group>"; };
 		293EA0EE25FB81B7008B101A /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
+		293EA11B25FBB72F008B101A /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				293EA02A25FA9952008B101A /* SearchViewController.swift */,
+				293EA11B25FBB72F008B101A /* AlertViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 				293EA0DB25FB3FA0008B101A /* ThumbnailImageView.swift in Sources */,
 				293EA02B25FA9952008B101A /* SearchViewController.swift in Sources */,
 				293EA0D525FB3F2B008B101A /* SearchCell.swift in Sources */,
+				293EA11C25FBB72F008B101A /* AlertViewController.swift in Sources */,
 				293EA0C025FB2B65008B101A /* SearchViewModel.swift in Sources */,
 				293EA02725FA9952008B101A /* AppDelegate.swift in Sources */,
 				293EA0C825FB2D29008B101A /* KakaoModel.swift in Sources */,
